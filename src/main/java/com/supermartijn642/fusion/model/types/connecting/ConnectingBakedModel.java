@@ -58,7 +58,7 @@ public class ConnectingBakedModel extends WrappedBakedModel {
 
     @Override
     public @NotNull List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, @NotNull RandomSource random, @NotNull ModelData modelData, @Nullable RenderType renderType){
-        SurroundingBlockData data = modelData.has(SURROUNDING_BLOCK_DATA_MODEL_PROPERTY) ? modelData.get(SURROUNDING_BLOCK_DATA_MODEL_PROPERTY) : null;
+        SurroundingBlockData data = modelData.get(SURROUNDING_BLOCK_DATA_MODEL_PROPERTY);
         int hashCode = data == null ? 0 : data.hashCode();
 
         // Get the correct cache and quads
